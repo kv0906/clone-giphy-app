@@ -37,8 +37,7 @@ class App extends Component {
         this.setState({ count });
     }
     render() {
-        const { gifs, itemCount} = this.state;
-        const count = this.state.count;
+        const { gifs, count} = this.state;
         const showData = (item, index) => {
             return ((index < count) ? <BlockImage
                 key={item.id}
