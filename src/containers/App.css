@@ -1,5 +1,6 @@
 .App {
   background: #eeeeee;
+  height: 100%;
 }
 .heading {
   text-align: center;
@@ -13,4 +14,30 @@
   height: 50px;
   margin-left: 20px;
 }
+.loadMore {
+  padding: 20px;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin:20px auto;
+  text-transform: uppercase;
+  width: 30%;
+  cursor:pointer;
+}
 
+.loadMore:hover {
+  background: #fff;
+  color: #000;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  transition: all .2s;
+}
+
+
+/*repsonsive*/
+@media (max-width: 767px) {
+  .loadMore {
+    width: 100%;
+  }
+}
