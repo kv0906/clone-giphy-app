@@ -1,0 +1,26 @@
+.img-block {
+  text-align: center;
+  padding: 10px;
+  background: #fff;
+  cursor:pointer;
+}
+
+.img-block img {
+  width: 100%;
+}
+
+.user-info {
+  display:flex;
+  align-items: center;
+}
+.user-info p {
+  color: #2d64af;
+  font-size: 15px;
+  margin: 10px 0;
+  padding-left: 10px;
+}
+
+.avatar {
+  width: 20px;
+  height: 20px;
+}
