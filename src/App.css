@@ -1,0 +1,13 @@
+.App {
+  background: #eeeeee;
+}
+
+.img-block {
+  text-align: center;
+  padding: 10px;
+  background: #fff;
+}
+.img-block img {
+  width: 100%;
+}
+
