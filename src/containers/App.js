@@ -19,13 +19,14 @@ class App extends Component {
         }
     }
 
-    componentDidMount() {
+    componentWillMount() {
         axios.get(`http://api.giphy.com/v1/gifs/trending?&api_key=MsBDqHxbtScxCgSgupdEIKOLG9YHMCSb`)
             .then(res => {
                 const data = res.data;
                 this.setState({
                     gifs: data.data
                 })
+                console.log(this.state.gifs)
             })
     }
 
@@ -38,8 +39,14 @@ class App extends Component {
     }
     render() {
         const { gifs, count} = this.state;
+
+
         const showData = (item, index) => {
-            return ((index < count) ? <BlockImage
+
+
+
+            return (
+                (index < count && typeof item.user !=='undefined') ? <BlockImage
                 key={item.id}
                 imageLink={item.images.original.url}
                 username={item.username}
@@ -54,7 +61,7 @@ class App extends Component {
                 </div>
                 <div className="wrapper container-fluid">
                     <div className="row">
-                        {gifs.map(showData)}
+                        {this.state.gifs.map(showData)}
                     </div>
                     <div onClick={this.onLoadMore.bind(this)} className="loadMore">Load More</div>
                 </div>
