@@ -46,16 +46,12 @@ class App extends Component {
 
 
             return (
-                (index < count && typeof item.user !=='undefined') ? <BlockImage
+                (index < count && typeof item.user.avatar_url !=='undefined') ? <BlockImage
                 key={item.id}
                 imageLink={item.images.original.url}
                 username={item.username}
                 avatarLink={item.user.avatar_url}
-            /> : <BlockImage
-                    key={item.id}
-                    imageLink={item.images.original.url}
-                    username={item.username}
-                />);
+            /> : '');
         };
         return (
             <div className="App">
