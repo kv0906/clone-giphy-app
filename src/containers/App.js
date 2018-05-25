@@ -51,7 +51,11 @@ class App extends Component {
                 imageLink={item.images.original.url}
                 username={item.username}
                 avatarLink={item.user.avatar_url}
-            /> : '');
+            /> : <BlockImage
+                    key={item.id}
+                    imageLink={item.images.original.url}
+                    username={item.username}
+                />);
         };
         return (
             <div className="App">
